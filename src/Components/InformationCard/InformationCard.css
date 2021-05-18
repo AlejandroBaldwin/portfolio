@@ -1,0 +1,77 @@
+.Information-Card {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    display: inline-flex;
+    justify-content: space-evenly;
+    place-items: center;
+    box-sizing: border-box;
+    background-color: #06343f;
+    border-radius: 20px;
+    margin: 0;
+    border: solid white 1px;
+}
+
+.Information-Card__Colunm {
+    width: 40%;
+}
+
+.Information-Card__Item-Title {
+    font-weight: 400;
+    color: rgb(102, 102, 102);
+    font-size: 0.7rem;
+    font-family: sans-serif;
+    padding-bottom: 3px;
+    border-bottom: 1px grey solid;
+    position: relative;
+}
+
+.Information-Card__Item-Body {
+    color: white;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    font-weight: 500;
+    font-size: 1rem;
+    bottom: 1px;
+}
+
+@media only screen and (min-width: 800px) {
+    .Information-Card {
+        min-width: none;
+        max-width: none;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+}
+
+@media only screen and (min-width: 1180px) {
+    .Information-Card {
+        height: 400px;
+        grid-column: 3 / 5;
+    }
+
+    .Information-Card__Item-Title {
+        font-size: 1.2rem;
+    }
+    
+    .Information-Card__Item-Body {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 3000px) {
+    .Information-Card {
+        grid-row: 1 / 2;
+        height: 100%;
+    }
+
+    .Information-Card__Item-Title {
+        font-size: 2.3rem;
+    }
+
+    .Information-Card__Item-Body {
+        font-size: 3.2rem;
+    }
+}

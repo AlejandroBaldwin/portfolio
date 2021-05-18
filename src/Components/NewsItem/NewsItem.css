@@ -1,0 +1,123 @@
+.NewsItem__Container {
+    width: 100%;
+    display: inline-flex;
+    height: 460px;
+    flex-direction: column;
+    padding: 0 20px;
+    background-color: #032129;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 10px 10px 0;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-wrap: break-word;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    vertical-align: top;
+}
+
+.NewsItem__Container:last-child {
+    margin-right: 0;
+}
+
+.NewsItem__Image {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto 0;
+}
+
+.NewsItem__Title {
+    font-family: sans-serif;
+    text-decoration: underline;
+    margin: 30px 0 0;
+    color: rgb(182, 182, 182);
+}
+
+.NewsItem__Source {
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    margin-top: 5px;
+    font-weight: 400;
+    color: grey;
+}
+
+.NewsItem__DateTime {
+    margin: -5px 0 0;
+    color: grey;
+    font-family: sans-serif;
+    font-size: 0.9rem;    
+}
+
+@media only screen and (min-width: 800px) {
+    .NewsItem__Container {
+        width: 100%;
+        height: 200px;
+        min-height: 200px;
+        align-content: center;
+        flex-direction: row;
+        position: relative;
+        overflow-y: visible;
+        -ms-overflow-style: visible;
+    }
+
+    .NewsItem__Image {
+        display: inline-block;
+        margin: auto 0;
+        width: 100px;
+        height: 100px;
+    }
+
+    .NewsItem__Title {
+        margin-left: 20px;
+    }
+
+    .NewsItem__Source {
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+    }
+
+    .NewsItem__DateTime {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media only screen and (min-width: 1180px) {
+    .NewsItem__Container {
+        height: 250px;
+        overflow-x: hidden;
+    }
+
+    .NewsItem__Image {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media only screen and (min-width: 3000px) {
+    .NewsItem__Container {
+        height: 400px;
+        margin-bottom: 30px;
+    }
+
+    .NewsItem__Image {
+        height: 350px;
+        width: 350px;
+    }
+
+    .NewsItem__Title {
+        font-size: 3rem;
+    }
+
+    .NewsItem__Source {
+        font-size: 2rem;
+    }
+
+    .NewsItem__DateTime {
+        font-size: 2rem;
+    }
+}

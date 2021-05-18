@@ -1,0 +1,91 @@
+body {
+  background: #02161b;
+  padding: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+  transition: 1s;
+}
+
+body:hover::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #000405;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #303f5c;
+  border-radius: 15px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #243046;
+}
+
+.Body__Container {
+  width: 100%;
+  height: 100vh;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-size: 80%;
+}
+
+.App__Main {
+  box-sizing: border-box;
+  padding: 0 20px;
+  height: fit-content;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  column-gap: 40px;
+  row-gap: 40px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.Attribution {
+  font-size: 1rem;
+  color: grey;
+  text-decoration: none;
+  position: relative;
+  bottom: 5px;
+  margin-bottom: 0;
+}
+
+
+@media only screen and (min-width: 800px) {
+  .App__Main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .Body__Container {
+    background-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 1180px) {
+  .App__Main {
+    row-gap: 20px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  .Body__Container {
+    background-size: 25%;
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .App__Main {
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 40px;
+  }
+}

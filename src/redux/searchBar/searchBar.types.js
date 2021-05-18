@@ -1,0 +1,7 @@
+const searchBarTypes = {
+    SEARCHBAR_STATE: 'SEARCHBAR_STATE',
+    SEARCHBAR_FOCUSED: 'SEARCHBAR_FOCUSED',
+    SEARCHBAR_UNFOCUSED: 'SEARCHBAR_UNFOCUSED'
+};
+
+export default searchBarTypes;

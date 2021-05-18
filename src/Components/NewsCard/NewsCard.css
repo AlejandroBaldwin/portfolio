@@ -1,0 +1,117 @@
+.NewsCard__Container {
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: #06343f;
+    border-radius: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    overflow-y: hidden;
+    white-space: nowrap;
+    vertical-align: top;
+    padding-bottom: 10px;
+    border: solid white 1px;
+}
+
+.NewsCard__Title {
+    font-size: 2rem;
+    font-family: sans-serif;
+    margin-left: 20px;
+    color: white;
+}
+
+.NewsCard__List-Container {
+    width: 100%;
+    display: inline-block;
+    overflow-x: scroll;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.NewsCard__List-Container::-webkit-scrollbar {
+    height: 10px;
+    z-index: 99999;
+    -webkit-overflow-scrolling: auto
+}
+
+.NewsCard__List-Container::-webkit-scrollbar:hover{
+    height: 15px;
+    transform: scaleY(1.2);
+}
+
+.NewsCard__List-Container::-webkit-scrollbar-track {
+    background: #010e11;
+    border-radius: 15px;
+}
+
+.NewsCard__List-Container::-webkit-scrollbar-track:hover {
+
+}
+
+.NewsCard__List-Container::-webkit-scrollbar-thumb {
+    background: #303f5c;
+    border-radius: 15px;
+}
+
+.NewsCard__List-Container::-webkit-scrollbar-thumb:hover {
+    background: #243046;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (min-width: 800px) {
+    .NewsCard__Container {
+        width: 100%;
+        max-width: none;
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        max-height: 300px;
+        overflow-y: hidden;
+    }
+
+    .NewsCard__List-Container {
+        margin-top: -20px;
+        height: 200px;
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 1180px) {
+    .NewsCard__Container {
+        grid-column: 1 / 5;
+        grid-row: 2/4;
+        max-height: none;
+        overflow-y: hidden;
+        margin: 0;
+    }
+
+    .NewsCard__List-Container {
+        height: 50%;
+        max-height: 750px;
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (min-width: 3000px) {
+    .NewsCard__Container {
+        grid-row: 2 / 3;
+        max-height: none;
+        height: 100%;
+    }
+
+    .NewsCard__Title {
+        font-size: 4rem;
+    }
+
+    .NewsCard__List-Container {
+        height: 100%;
+        padding: 0 30px;
+    }
+}
